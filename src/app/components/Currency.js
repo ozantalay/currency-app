@@ -26,7 +26,7 @@ const Currency = () => {
 
   return (
     <div className="currency-div">
-      <div style={{ backgroundColor:"green", color:"white", height:"30px",width:"100%",textAlign:"center",paddingBottom:"20px"}} >
+      <div style={{ backgroundColor:"green", color:"white", height:"30px",width:"100%",textAlign:"center",paddingBottom:"20px" , borderRadius:"10px", border:"1px solid black"}} >
         <h3 >Döviz Kuru Uygulaması</h3>
       </div>
 
