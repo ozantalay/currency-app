@@ -18,10 +18,15 @@ const Currency = () => {
     // console.log(from);
     // console.log(toCurrency);
     // console.log(result);
+    try{
 
-     const response = await axios.get(`${URL}?apikey=${API_KEY}&base_currency=${from}`)
-     console.log(response.data.data[toCurrency]);
-     setResult((response.data.data[toCurrency]*amount).toFixed(2))
+      
+      const response = await axios.get(`${URL}?apikey=${API_KEY}&base_currency=${from}`)
+      console.log(response.data.data[toCurrency]);
+      setResult((response.data.data[toCurrency]*amount).toFixed(2))
+    }catch(error){
+      console.log("veriyi çekerken hata meydana geldi",error)
+    }
   }
 
   return (
@@ -44,7 +49,7 @@ const Currency = () => {
         className="from-currency-option">
             <option>USD</option>
             <option>EUR</option>
-            <option>TL</option>
+            <option>TRY</option>
         </select>
 
         <FaArrowCircleRight style={{fontSize:"25px", color:"green", marginRight:"7px",paddingTop:"10px"}} />
@@ -52,9 +57,9 @@ const Currency = () => {
         <select 
         onChange={(e)=>setToCurrency(e.target.value)}
         className="to-currency-option">
-            <option>TL</option>
-            <option>USD</option>
-            <option>EUR</option>
+            <option value="TRY">TRY</option>
+            <option value="USD">USD</option>
+            <option value="EUR">EUR</option>
         </select>
 
         <input 
