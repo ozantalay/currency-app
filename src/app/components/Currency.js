@@ -47,7 +47,7 @@ const Currency = () => {
             <option>TL</option>
         </select>
 
-        <FaArrowCircleRight style={{fontSize:"25px", color:"black", marginRight:"7px",paddingTop:"10px"}} />
+        <FaArrowCircleRight style={{fontSize:"25px", color:"green", marginRight:"7px",paddingTop:"10px"}} />
 
         <select 
         onChange={(e)=>setToCurrency(e.target.value)}
